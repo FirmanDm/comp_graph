@@ -20,9 +20,10 @@ matrix = ([[math.cos(alpha), math.sin(alpha), 0],
 
 draw = ImageDraw.Draw(image)
 for index, row in df.iterrows():
-    x, y = row['y'], 540 - row['x']
+    x, y = row['x'], row['y']
     result = np.matmul(np.array([x, y, 1]), matrix)
     draw.point((int(result[0]), int(result[1])), fill=ImageColor.getrgb("blue"))
+
 
 image.show()
 name = input("Enter name for saved image(in format 'file_name.png'):")
