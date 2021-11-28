@@ -7,7 +7,6 @@ width = 960
 height = 540
 image = Image.new("RGB", (width, height), (255, 255, 255))
 
-# C:\Users\galia\Downloads\DS0.txt
 filepath = input("Input path to your file: ")
 df = pd.read_csv(filepath, sep=" ", header=None)
 head = ['x', 'y']
